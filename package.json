@@ -1,38 +1,22 @@
 {
-  "name": "@woovi/node-printer",
+  "name": "@seokju-na/node-printer",
   "description": "Node.js printer bindings",
-  "version": "1.0.1",
-  "author": {
-    "name": "Ion Lupascu",
-    "url": "http://program-support.co.uk/",
-    "email": "ionlupascu@gmail.com"
-  },
+  "version": "1.0.0",
   "binary": {
     "module_name": "node_printer",
     "module_path": "./lib/binding",
-    "host": "https://github.com/entria/node-printer/releases/download/",
+    "host": "https://github.com/seokju-na/node-printer/releases/download/",
     "remote_path": "v{version}"
   },
-  "contributors": [
-    "Thiago Lugli <thiagoelg@gmail.com>",
-    "Eko Eryanto <ekoeryanto@gmail.com>",
-    "Francimar Alves <mazinsw@gmail.com>"
-  ],
+  "license": "MIT",
   "dependencies": {
     "@mapbox/node-pre-gyp": "^1.0.9",
     "nan": "^2.15.0",
     "prebuild-install": "^7.0.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.2.0",
-    "@commitlint/config-conventional": "^18.1.0",
-    "eslint": "^8.48.0",
-    "eslint-config-egg": "^13.0.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.0.2",
     "node-abi": "^3.8.0",
-    "node-gyp": "^10.0.0",
-    "nodeunit": "*",
+    "node-gyp": "^10.2.0",
     "patch-package": "^8.0.0",
     "prebuild": "^12.1.0",
     "prebuild-ci": "^4.0.0",
@@ -50,35 +34,15 @@
     ".": "./lib/printer.js",
     "./build": "./build.js"
   },
-  "keywords": [
-    "native",
-    "node",
-    "printer"
-  ],
-  "license": "MIT",
   "main": "./lib/printer",
-  "overrides": {
-    "node-gyp": "^9.4.0"
-  },
   "publishConfig": {
     "access": "public"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/entria/node-printer.git"
-  },
-  "resolutions": {
-    "node-gyp": "^9.4.0"
-  },
   "scripts": {
     "apply-patches": "patch-package",
-    "install": "prebuild || node-gyp rebuild",
+    "install": "prebuild-install || node-gyp rebuild",
     "prebuild": "prebuild",
-    "rebuild": "node-gyp rebuild",
-    "release:major": "npm version major && git push --follow-tags",
-    "release:minor": "npm version minor && git push --follow-tags",
-    "release:patch": "npm version patch && git push --follow-tags",
-    "test": "nodeunit test"
+    "rebuild": "node-gyp rebuild"
   },
   "types": "types/index.d.ts"
 }
