@@ -27,7 +27,8 @@
         "<!(node -e \"require('nan')\")"
       ],
       'cflags_cc+': [
-        "-Wno-deprecated-declarations"
+        "-Wno-deprecated-declarations",
+        '-std=gnu++20'
       ],
       'conditions': [
         # common exclusions
