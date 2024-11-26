@@ -25,6 +25,8 @@ jobs:
           npm run prebuild -- -t 15.3.5 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 22.3.7 -r electron --arch ia32 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 22.3.7 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
+          npm run prebuild -- -t 32.2.5 -r electron --arch ia32 -u ${{ secrets.PREBUILD_TOKEN }}
+          npm run prebuild -- -t 32.2.5 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 20.18.0 -r node --arch ia32 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 20.18.0 -r node --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
   macos:
@@ -35,7 +37,7 @@ jobs:
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
       - uses: actions/setup-node@v3
         with:
           node-version: 20.x
@@ -45,6 +47,7 @@ jobs:
         run: |
           npm run prebuild -- -t 15.3.5 -r electron --arch arm64 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 22.3.7 -r electron --arch arm64 -u ${{ secrets.PREBUILD_TOKEN }}
+          npm run prebuild -- -t 32.2.5 -r electron --arch arm64 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 20.18.0 -r node --arch arm64 -u ${{ secrets.PREBUILD_TOKEN }}
   macos-x64:
     name: Prebuild Binaries for macOS (x64)
@@ -54,7 +57,7 @@ jobs:
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
       - uses: actions/setup-node@v3
         with:
           node-version: 20.x
@@ -64,6 +67,7 @@ jobs:
         run: |
           npm run prebuild -- -t 15.3.5 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 22.3.7 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
+          npm run prebuild -- -t 32.2.5 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 20.18.0 -r node --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
   windows:
     name: Prebuild Binaries for Windows
@@ -81,5 +85,7 @@ jobs:
           npm run prebuild -- -t 15.3.5 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 22.3.7 -r electron --arch ia32 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 22.3.7 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
+          npm run prebuild -- -t 32.2.5 -r electron --arch ia32 -u ${{ secrets.PREBUILD_TOKEN }}
+          npm run prebuild -- -t 32.2.5 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 20.18.0 -r node --arch ia32 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 20.18.0 -r node --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
