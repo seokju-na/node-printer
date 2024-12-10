@@ -23,8 +23,8 @@ jobs:
         run: |
           npm run prebuild -- -t 15.3.5 -r electron --arch ia32 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 15.3.5 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
-          npm run prebuild -- -t 22.3.7 -r electron --arch ia32 -u ${{ secrets.PREBUILD_TOKEN }}
-          npm run prebuild -- -t 22.3.7 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
+          npm run prebuild -- -t 22.3.27 -r electron --arch ia32 -u ${{ secrets.PREBUILD_TOKEN }}
+          npm run prebuild -- -t 22.3.27 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 32.2.5 -r electron --arch ia32 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 32.2.5 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 20.18.0 -r node --arch ia32 -u ${{ secrets.PREBUILD_TOKEN }}
@@ -46,7 +46,7 @@ jobs:
       - name: Prebuild
         run: |
           npm run prebuild -- -t 15.3.5 -r electron --arch arm64 -u ${{ secrets.PREBUILD_TOKEN }}
-          npm run prebuild -- -t 22.3.7 -r electron --arch arm64 -u ${{ secrets.PREBUILD_TOKEN }}
+          npm run prebuild -- -t 22.3.27 -r electron --arch arm64 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 32.2.5 -r electron --arch arm64 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 20.18.0 -r node --arch arm64 -u ${{ secrets.PREBUILD_TOKEN }}
   macos-x64:
@@ -66,7 +66,7 @@ jobs:
       - name: Prebuild
         run: |
           npm run prebuild -- -t 15.3.5 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
-          npm run prebuild -- -t 22.3.7 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
+          npm run prebuild -- -t 22.3.27 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 32.2.5 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 20.18.0 -r node --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
   windows:
@@ -83,8 +83,8 @@ jobs:
         run: |
           npm run prebuild -- -t 15.3.5 -r electron --arch ia32 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 15.3.5 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
-          npm run prebuild -- -t 22.3.7 -r electron --arch ia32 -u ${{ secrets.PREBUILD_TOKEN }}
-          npm run prebuild -- -t 22.3.7 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
+          npm run prebuild -- -t 22.3.27 -r electron --arch ia32 -u ${{ secrets.PREBUILD_TOKEN }}
+          npm run prebuild -- -t 22.3.27 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 32.2.5 -r electron --arch ia32 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 32.2.5 -r electron --arch x64 -u ${{ secrets.PREBUILD_TOKEN }}
           npm run prebuild -- -t 20.18.0 -r node --arch ia32 -u ${{ secrets.PREBUILD_TOKEN }}
