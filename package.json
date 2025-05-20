@@ -1,7 +1,7 @@
 {
   "name": "@seokju-na/node-printer",
   "description": "Node.js printer bindings",
-  "version": "2.2.1",
+  "version": "3.0.0",
   "binary": {
     "module_name": "node_printer",
     "module_path": "./lib/binding",
