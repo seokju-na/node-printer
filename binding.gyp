@@ -24,7 +24,8 @@
         'src/node_printer_posix.cc'
       ],
       'include_dirs' : [
-        "<!(node -e \"require('nan')\")"
+        "<!(node -e \"require('nan')\")",
+        "src"
       ],
       'cflags_cc+': [
         "-Wno-deprecated-declarations",
