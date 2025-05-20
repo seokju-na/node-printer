@@ -96,4 +96,5 @@ jobs:
           npm run prebuild -- -t 32.2.5 -r electron --arch x64 -u ${{ github.token }}
           npm run prebuild -- -t 20.18.0 -r node --arch ia32 -u ${{ github.token }}
           npm run prebuild -- -t 20.18.0 -r node --arch x64 -u ${{ github.token }}
+          npm run prebuild -- -t 22.15.0 -r node --arch ia32 -u ${{ github.token }}
           npm run prebuild -- -t 22.15.0 -r node --arch x64 -u ${{ github.token }}
