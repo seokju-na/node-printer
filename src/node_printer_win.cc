@@ -42,8 +42,6 @@ namespace{
             }
         }
     };
-    private:
-        Type* _value = NULL;
 
     struct PrinterHandle
     {

@@ -21,7 +21,9 @@
       'sources': [
         'src/node_printer.cc',
         'src/node_printer_win.cc',
-        'src/node_printer_posix.cc'
+        'src/node_printer_posix.cc',
+        'src/macros.hh',
+        'src/node_printer.hpp'
       ],
       'include_dirs' : [
         "<!(node -e \"require('nan')\")"
@@ -56,6 +58,12 @@
             'libraries': [
               '<!(cups-config --libs)'
             ]
+          },
+          'msvc_settings': {
+            'VCCLCompilerTool': {
+              'ExceptionHandling': 1,
+              'AdditionalOptions': ['/std:c++17']
+            }
           }
         }],
         ['OS=="mac"', {
