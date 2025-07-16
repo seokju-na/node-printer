@@ -90,11 +90,16 @@ jobs:
         run: |
           npm run prebuild -- -t 15.3.5 -r electron --arch ia32 -u ${{ github.token }}
           npm run prebuild -- -t 15.3.5 -r electron --arch x64 -u ${{ github.token }}
+          npm run prebuild -- -t 15.3.5 -r electron --arch arm64 -u ${{ github.token }}
           npm run prebuild -- -t 22.3.27 -r electron --arch ia32 -u ${{ github.token }}
           npm run prebuild -- -t 22.3.27 -r electron --arch x64 -u ${{ github.token }}
+          npm run prebuild -- -t 22.3.27 -r electron --arch arm64 -u ${{ github.token }}
           npm run prebuild -- -t 32.2.5 -r electron --arch ia32 -u ${{ github.token }}
           npm run prebuild -- -t 32.2.5 -r electron --arch x64 -u ${{ github.token }}
+          npm run prebuild -- -t 32.2.5 -r electron --arch arm64 -u ${{ github.token }}
           npm run prebuild -- -t 20.18.0 -r node --arch ia32 -u ${{ github.token }}
           npm run prebuild -- -t 20.18.0 -r node --arch x64 -u ${{ github.token }}
+          npm run prebuild -- -t 20.18.0 -r node --arch arm64 -u ${{ github.token }}
           npm run prebuild -- -t 22.15.0 -r node --arch ia32 -u ${{ github.token }}
           npm run prebuild -- -t 22.15.0 -r node --arch x64 -u ${{ github.token }}
+          npm run prebuild -- -t 22.15.0 -r node --arch arm64 -u ${{ github.token }}
