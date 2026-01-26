@@ -1,7 +1,7 @@
 {
   "name": "@seokju-na/node-printer",
   "description": "Node.js printer bindings",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "binary": {
     "module_name": "node_printer",
     "module_path": "./lib/binding",
@@ -31,10 +31,13 @@
     "node": ">= 4.0.0"
   },
   "exports": {
-    ".": "./lib/printer.js",
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./lib/printer.js"
+    },
     "./build": "./build.js"
   },
-  "main": "./lib/printer",
+  "main": "./lib/printer.js",
   "publishConfig": {
     "access": "public"
   },
@@ -44,5 +47,5 @@
     "prebuild": "prebuild",
     "rebuild": "node-gyp rebuild"
   },
-  "types": "types/index.d.ts"
+  "types": "./types/index.d.ts"
 }
