@@ -85,9 +85,13 @@ jobs:
     runs-on: windows-2022
     timeout-minutes: 30
     steps:
+      # Keep the host Node at 22.x on Windows: prebuild's bundled node-gyp 9.x builds
+      # config.gypi from the host's process.config, and official Node 24 Windows builds
+      # have clang=1. That makes common.gypi request C++20 via LanguageStandard, which
+      # gyp 9.x drops, so Node 22/24 targets end up compiled as C++14 with ClangCL.
       - uses: actions/setup-node@v4
         with:
-          node-version: 24.x
+          node-version: 22.x
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:

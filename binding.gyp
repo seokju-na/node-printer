@@ -38,7 +38,10 @@
         ['OS!="win"', {
           'sources/': [['exclude', '_win\\.cc$']]}, {
           # else if OS==win, exclude also posix files
-          'sources/': [['exclude', '_posix\\.cc$']]
+          'sources/': [['exclude', '_posix\\.cc$']],
+          # windows.h (pulled in via uv.h) defines min/max macros that break
+          # std::numeric_limits<T>::max() in newer V8 headers (e.g. Electron 32).
+          'defines': [ 'NOMINMAX' ]
         }],
         # specific settings
         ['OS!="win"', {
