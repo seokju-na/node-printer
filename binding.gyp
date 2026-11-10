@@ -2,7 +2,10 @@
   "variables": {
     "module_name%": "node_printer",
     "module_path%": "lib/binding",
-    "openssl_fips": ""
+    "openssl_fips": "",
+    # Node >= 24 common.gypi references this on Windows, but process.config of
+    # older host Node (used by prebuild's node-gyp) doesn't define it.
+    "enable_thin_lto%": "false"
   },
   'targets': [
     {
